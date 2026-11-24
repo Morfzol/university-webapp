@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#172554">
+  <title>Подбор университета</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="brand-mark">У</div>
+      <div><p class="eyebrow">TELEGRAM WEB APP</p><h1>Подбор университета</h1><p class="subtitle">Найдите подходящий вуз по направлению и городу</p></div>
+    </header>
+    <section class="panel">
+      <div class="step-heading"><span class="step-number">01</span><div><h2>Направление подготовки</h2><p>Выберите интересующую специальность</p></div></div>
+      <label class="field-label" for="specialty">Специальность</label>
+      <select id="specialty"><option value="">Выберите направление</option></select>
+      <div class="step-heading second-step"><span class="step-number">02</span><div><h2>Местоположение</h2><p>Укажите город, в котором хотите учиться</p></div></div>
+      <label class="field-label" for="city">Город</label>
+      <select id="city" disabled><option value="">Сначала выберите направление</option></select>
+      <div class="step-heading second-step"><span class="step-number">03</span><div><h2>Университет</h2><p>Выберите вуз из доступного списка</p></div></div>
+      <label class="field-label" for="university">Учебное заведение</label>
+      <select id="university" disabled><option value="">Сначала выберите город</option></select>
+      <div class="selection-summary" id="summary"><span class="summary-icon">✦</span><p>После выбора направления, города и вуза здесь появится краткое описание вашего выбора.</p></div>
+      <button id="sendButton" class="send-button" type="button" disabled>Передать выбор боту <span aria-hidden="true">→</span></button>
+      <p class="hint">После отправки бот загрузит подробную информацию об университете.</p>
+    </section>
+    <footer>Информационная система подбора вузов</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
